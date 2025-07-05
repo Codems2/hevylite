@@ -15,6 +15,7 @@ function App() {
           <Route path="/today" element={<Today />} />
           <Route path="/routines" element={<Routines />} />
           <Route path="/history" element={<History />} />
+          <Route path="*" element={<Navigate to="/" replace />} /> {/* Redirección para rutas no válidas */}
         </Routes>
       </main>
     </Router>

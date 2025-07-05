@@ -79,6 +79,14 @@ export default function Routines() {
     }
   };
 
+  const deleteSet = (exerciseIndex: number, setIndex: number) => {
+    const updated = [...routine];
+    if (updated[exerciseIndex].sets.length > 1) {
+      updated[exerciseIndex].sets.splice(setIndex, 1); // Elimina la serie en el índice especificado
+      setRoutine(updated);
+    }
+  };
+
   const saveRoutine = () => {
     if (!routineName.trim()) {
       alert('Por favor, asigna un nombre al entrenamiento antes de guardar.');
@@ -171,10 +179,21 @@ export default function Routines() {
               ➕ Añadir serie
             </button>
 
-            <button className={styles.deleteButton} onClick={() => deleteExercise(i)}>
-              🗑️ Eliminar ejercicio
+            <button
+              className={styles.secondaryButton}
+              onClick={() => deleteSet(i, exercise.sets.length - 1)}
+              disabled={exercise.sets.length === 1} // Bloquea el botón si solo hay una serie
+            >
+              ➖ Eliminar serie
             </button>
           </div>
+
+          <button
+            className={styles.deleteButton}
+            onClick={() => deleteExercise(i)}
+          >
+            🗑️ Eliminar ejercicio
+          </button>
         </div>
       ))}
 

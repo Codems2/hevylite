@@ -145,14 +145,42 @@
   }
 
   .buttonGroup {
-    display: flex;
-    flex-direction: column; /* Colocamos los botones en columna */
+    display: flex; /* Coloca los botones en fila */
+    flex-wrap: nowrap; /* Asegura que los botones estén en una sola fila */
+    justify-content: space-between; /* Distribuye los botones horizontalmente */
     gap: 0.5rem; /* Espaciado entre los botones */
+    width: 100%; /* Asegura que los botones ocupen todo el ancho */
+  }
+
+  .secondaryButton {
+    flex: 1; /* Hace que cada botón ocupe el mismo espacio */
+    text-align: center; /* Centra el texto dentro del botón */
   }
 
   .button {
     font-size: 0.9rem; /* Ajustamos el tamaño de fuente para móviles */
     padding: 0.75rem; /* Ajustamos el padding interno */
     width: 100%; /* Aseguramos que los botones ocupen todo el ancho */
+  }
+
+  .deleteButton {
+    margin-top: 1rem; /* Añadimos un margen superior para separarlo de los otros botones */
+  }
+}
+
+@media (min-width: 769px) {
+  .buttonGroup {
+    display: flex; /* Coloca los botones en fila */
+    flex-wrap: nowrap; /* Asegura que los botones estén en una sola fila */
+    justify-content: flex-start; /* Alinea los botones uno después del otro */
+    gap: 1rem; /* Espaciado entre los botones */
+    width: 100%; /* Asegura que los botones ocupen todo el ancho */
+  }
+
+  .secondaryButton,
+  .deleteButton {
+    flex: 1; /* Hace que cada botón ocupe el mismo espacio */
+    text-align: center; /* Centra el texto dentro del botón */
+    margin-top: 1%;
   }
 }
