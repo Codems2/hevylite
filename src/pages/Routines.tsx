@@ -5,7 +5,7 @@ import styles from './Routines.module.css';
 type Set = {
   reps: string;
   weight: number;
-  rir: number;
+  rir: string; // Cambiamos de `number` a `string`
 };
 
 type Exercise = {
@@ -38,14 +38,14 @@ export default function Routines() {
   const handleSetChange = (
     exIndex: number,
     setIndex: number,
-    field: keyof Set, // Aseguramos que `field` sea una clave válida de `Set`
-    value: string | number // Permitimos que `value` sea de tipo `string | number`
+    field: keyof Set,
+    value: string
   ) => {
     const updated = [...routine];
-    if (field === 'weight' || field === 'rir') {
-      updated[exIndex].sets[setIndex][field] = parseFloat(value as string); // Convertimos a número si es necesario
+    if (field === 'weight') {
+      updated[exIndex].sets[setIndex][field] = parseFloat(value) || 0; // Convertimos a número para 'weight'
     } else {
-      updated[exIndex].sets[setIndex][field] = value as string; // Asignamos como string para 'reps'
+      updated[exIndex].sets[setIndex][field] = value; // Asignamos directamente para 'reps' y 'rir'
     }
     setRoutine(updated);
   };
@@ -57,7 +57,7 @@ export default function Routines() {
         name: '',
         tempo: '',
         observaciones: '',
-        sets: [{ reps: '', weight: 0, rir: 0 }],
+        sets: [{ reps: '', weight: 0, rir: '' }], // Cambiamos `rir` a un string vacío
       },
     ]);
     setShowRoutineName(true);
@@ -65,8 +65,18 @@ export default function Routines() {
 
   const addSet = (index: number) => {
     const updated = [...routine];
-    updated[index].sets.push({ reps: '', weight: 0, rir: 0 });
+    updated[index].sets.push({ reps: '', weight: 0, rir: '' });
     setRoutine(updated);
+  };
+
+  const deleteExercise = (index: number) => {
+    const updated = [...routine];
+    updated.splice(index, 1); // Elimina el ejercicio en el índice especificado
+    setRoutine(updated);
+
+    if (updated.length === 0) {
+      setShowRoutineName(false); // Oculta el input si no hay ejercicios
+    }
   };
 
   const saveRoutine = () => {
@@ -98,7 +108,7 @@ export default function Routines() {
     <div className={styles.container}>
       <h1 className={styles.title}>📝 Crear Entrenamiento</h1>
 
-      {showRoutineName && (
+      {routine.length > 0 && showRoutineName && (
         <input
           className={styles.input}
           type="text"
@@ -148,17 +158,23 @@ export default function Routines() {
                 <label className={styles.inputLabel}>RIR</label>
                 <input
                   className={styles.input}
-                  type="number"
+                  type="text" // Cambiamos de "number" a "text"
                   value={set.rir}
-                  onChange={(e) => handleSetChange(i, j, 'rir', e.target.value)}
+                  onChange={(e) => handleSetChange(i, j, 'rir', e.target.value)} // Mantenemos la lógica de cambio
                 />
               </div>
             </div>
           ))}
 
-          <button className={styles.secondaryButton} onClick={() => addSet(i)}>
-            ➕ Añadir serie
-          </button>
+          <div className={styles.buttonGroup}>
+            <button className={styles.secondaryButton} onClick={() => addSet(i)}>
+              ➕ Añadir serie
+            </button>
+
+            <button className={styles.deleteButton} onClick={() => deleteExercise(i)}>
+              🗑️ Eliminar ejercicio
+            </button>
+          </div>
         </div>
       ))}
 
