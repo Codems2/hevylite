@@ -4,34 +4,6 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  position: relative; /* Necesario para el fondo animado */
-  overflow: hidden; /* Ocultamos cualquier exceso de animación */
-  transition: background-color 0.5s ease; /* Suavizamos el cambio de color */
-}
-
-.container.active {
-  background-color: #f0f8ff; /* Color liviano (AliceBlue) */
-}
-
-.background-animation {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, #007bff 10%, transparent 70%);
-  border-radius: 50%;
-  animation: rotateAnimation 10s linear infinite; /* Animación suavizada */
-  transform-origin: center;
-}
-
-@keyframes rotateAnimation {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
 }
 
 .title {
@@ -47,7 +19,7 @@
 }
 
 .card {
-  position: relative; /* Necesario para posicionar el botón en la esquina */
+  position: relative;
   background: #fff;
   border-radius: 8px;
   padding: 1.5rem;
@@ -62,9 +34,6 @@
 }
 
 .menuButton {
-  position: absolute; /* Posicionamos el botón en la esquina superior derecha */
-  top: 1rem;
-  right: 1rem;
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -78,7 +47,7 @@
 
 .menu {
   position: absolute;
-  top: 2.5rem; /* Ajustamos la posición debajo del botón */
+  top: 2.5rem;
   right: 1rem;
   background: #f8f8f8;
   border: 1px solid #ddd;
@@ -154,4 +123,28 @@
 .disabledButton {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.headerButton {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.headerButton:hover {
+  background-color: #f0f0f0;
 }

@@ -52,20 +52,30 @@
 /* Estilos responsive */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column; /* Cambiamos a diseño vertical en pantallas pequeñas */
-    height: auto; /* Ajustamos la altura automáticamente */
-    padding: 0.5rem; /* Reducimos el espaciado */
+    position: fixed;
+    bottom: 0; /* Mueve el header a la parte inferior */
+    top: auto; /* Elimina la posición superior */
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1); /* Ajusta la sombra para la parte inferior */
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    align-items: center; /* Centra los enlaces verticalmente */
+  }
+
+  .logo {
+    display: none; /* Ocultamos el logo en dispositivos móviles */
   }
 
   .nav {
     position: static; /* Eliminamos la posición absoluta */
     transform: none; /* Eliminamos el centrado por transformación */
-    flex-direction: column; /* Enlaces en columna */
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    flex-direction: row; /* Mantiene los enlaces en fila */
     gap: 1rem; /* Espaciado entre enlaces */
-    margin-top: 0.5rem; /* Separación del logo */
   }
 
   .link {
     font-size: 0.9rem; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    padding: 0.5rem;
   }
 }

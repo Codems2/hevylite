@@ -36,6 +36,7 @@
 
 .inputGroup {
   margin-bottom: 1rem;
+  flex: 1; /* Aseguramos que los inputs ocupen el espacio disponible */
 }
 
 .inputLabel {
@@ -46,7 +47,8 @@
 .setRow {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  gap: 0.1rem; /* Reducimos el espacio entre los inputs al mínimo */
+  margin-bottom: 0.5rem; /* Ajustamos el margen inferior */
 }
 
 .secondaryButton {
@@ -79,6 +81,18 @@
   background: #005bb5;
 }
 
+.inputWeight,
+.inputLabelWeight {
+  display: none; /* Oculta el campo y el label de peso */
+}
+
+.addExerciseButton {
+  display: block; /* Aseguramos que el botón sea un bloque */
+  margin: 2rem auto; /* Centramos el botón horizontalmente */
+  text-align: center; /* Alineamos el texto dentro del botón */
+}
+
+/* Estilos responsive */
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
@@ -90,5 +104,35 @@
 
   .input {
     width: 100%;
+  }
+
+  .formContainer {
+    padding: 1rem; /* Reducimos el padding para móviles */
+    display: flex;
+    flex-direction: column; /* Aseguramos que los elementos estén en columna */
+    gap: 1rem; /* Espaciado uniforme entre los elementos */
+  }
+
+  .inputGroup {
+    width: 100%; /* Aseguramos que los inputs ocupen todo el ancho */
+  }
+
+  .input {
+    font-size: 0.9rem; /* Ajustamos el tamaño de fuente para móviles */
+    padding: 0.5rem; /* Reducimos el padding interno */
+    width: 100%; /* Aseguramos que los inputs ocupen todo el ancho */
+    box-sizing: border-box; /* Incluimos el padding en el ancho total */
+  }
+
+  .buttonGroup {
+    display: flex;
+    flex-direction: column; /* Colocamos los botones en columna */
+    gap: 0.5rem; /* Espaciado entre los botones */
+  }
+
+  .button {
+    font-size: 0.9rem; /* Ajustamos el tamaño de fuente para móviles */
+    padding: 0.75rem; /* Ajustamos el padding interno */
+    width: 100%; /* Aseguramos que los botones ocupen todo el ancho */
   }
 }

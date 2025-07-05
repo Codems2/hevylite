@@ -61,8 +61,8 @@ export default function Today() {
   const handleSetChange = (
     exIndex: number,
     setIndex: number,
-    field: keyof Set, // Aseguramos que `field` sea una clave válida de `Set`
-    value: string | number // Permitimos que `value` sea de tipo `string | number`
+    field: keyof Set,
+    value: string | number
   ) => {
     if (!activeRoutine) return;
 
@@ -70,11 +70,10 @@ export default function Today() {
     const updatedExercises = [...updatedRoutine.exercises];
     const updatedSets = [...updatedExercises[exIndex].sets];
 
-    // Actualizamos el valor en el set específico
     if (field === 'weight' || field === 'rir') {
-      updatedSets[setIndex][field] = parseFloat(value as string); // Convertimos a número si es necesario
+      updatedSets[setIndex][field] = parseFloat(value as string);
     } else {
-      updatedSets[setIndex][field] = value as string; // Asignamos como string para 'reps'
+      updatedSets[setIndex][field] = value as string;
     }
 
     updatedExercises[exIndex].sets = updatedSets;

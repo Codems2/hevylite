@@ -145,16 +145,6 @@ export default function Routines() {
               </div>
 
               <div className={styles.inputGroup}>
-                <label className={styles.inputLabel}>Peso (kg)</label>
-                <input
-                  className={styles.input}
-                  type="number"
-                  value={set.weight}
-                  onChange={(e) => handleSetChange(i, j, 'weight', e.target.value)}
-                />
-              </div>
-
-              <div className={styles.inputGroup}>
                 <label className={styles.inputLabel}>RIR</label>
                 <input
                   className={styles.input}
@@ -172,7 +162,7 @@ export default function Routines() {
         </div>
       ))}
 
-      <button className={styles.primaryButton} onClick={addExercise}>
+      <button className={`${styles.primaryButton} ${styles.addExerciseButton}`} onClick={addExercise}>
         ➕ Añadir ejercicio
       </button>
 
