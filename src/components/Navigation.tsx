@@ -6,6 +6,7 @@ export default function Navigation() {
       <Link to="/today" className="text-blue-600 font-medium">🏋️ Hoy</Link>
       <Link to="/routines" className="text-gray-600">📋 Rutinas</Link>
       <Link to="/history" className="text-gray-600">📊 Historial</Link>
+      <Link to="/import" className="text-gray-600">Import</Link>
     </nav>
   );
 }

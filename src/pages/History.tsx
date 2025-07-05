@@ -23,6 +23,7 @@ type Session = {
 
 export default function History() {
   const [history, setHistory] = useState<Session[]>([]);
+  const [menuVisible, setMenuVisible] = useState<number | null>(null); // Controla qué menú está abierto
 
   useEffect(() => {
     const data = localStorage.getItem('training-history');
@@ -31,6 +32,13 @@ export default function History() {
     }
   }, []);
 
+  const deleteSession = (index: number) => {
+    const updatedHistory = [...history];
+    updatedHistory.splice(index, 1); // Eliminamos el entrenamiento del historial
+    setHistory(updatedHistory);
+    localStorage.setItem('training-history', JSON.stringify(updatedHistory)); // Actualizamos el localStorage
+  };
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>📅 Historial de Entrenamientos</h1>
@@ -38,18 +46,40 @@ export default function History() {
 
       {history.map((session, i) => (
         <div key={i} className={styles.card}>
-          <h3>{session.date}</h3>
+          <div className={styles.cardHeader}>
+            <h3>{session.date}</h3>
+            <button
+              className={styles.menuButton}
+              onClick={() => setMenuVisible(menuVisible === i ? null : i)} // Alternamos el menú
+            >
+              ⋮
+            </button>
+          </div>
           <p>🕒 Duración: {session.duration}</p>
-          {session.exercises.map((ex, j) => (
-            <div key={j} className={styles.exerciseBlock}>
-              <h4>{ex.name}</h4>
-              {ex.tempo && <p>Tempo: {ex.tempo}</p>}
-              {ex.observaciones && <p className={styles.note}>📝 {ex.observaciones}</p>}
-              {ex.sets.map((set, k) => (
-                <p key={k}>🔁 {set.reps} reps - {set.weight}kg - RIR {set.rir}</p>
-              ))}
+          {Array.isArray(session.exercises) ? (
+            session.exercises.map((ex, j) => (
+              <div key={j} className={styles.exerciseBlock}>
+                <h4>{ex.name}</h4>
+                {ex.tempo && <p>Tempo: {ex.tempo}</p>}
+                {ex.observaciones && <p className={styles.note}>📝 {ex.observaciones}</p>}
+                {ex.sets.map((set, k) => (
+                  <p key={k}>🔁 {set.reps} reps - {set.weight}kg - RIR {set.rir}</p>
+                ))}
+              </div>
+            ))
+          ) : (
+            <p>No hay ejercicios registrados.</p>
+          )}
+          {menuVisible === i && (
+            <div className={styles.menu}>
+              <button
+                className={styles.deleteButton}
+                onClick={() => deleteSession(i)}
+              >
+                🗑️ Eliminar entrenamiento
+              </button>
             </div>
-          ))}
+          )}
         </div>
       ))}
     </div>

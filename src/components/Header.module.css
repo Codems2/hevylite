@@ -3,34 +3,69 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ccc;
+  height: 50px; /* Altura compacta */
+  background: linear-gradient(90deg, #a3d5ff, #ffd59a); /* Gradiente azul y naranja suave */
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 1rem; /* Espaciado horizontal reducido */
   z-index: 100;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
 .logo {
+  font-size: 1.2rem;
   font-weight: bold;
-  font-size: 1.1rem;
-  color: #007bff;
+  color: #333333; /* Color oscuro para el logo */
+  margin-left: 0; /* Alineamos el logo a la izquierda */
 }
 
 .nav {
+  position: absolute; /* Posicionamos el contenedor de navegación */
+  left: 50%; /* Centramos horizontalmente */
+  transform: translateX(-50%); /* Ajustamos el centrado */
   display: flex;
-  gap: 1rem;
+  gap: 2rem; /* Espaciado uniforme entre enlaces */
 }
 
 .link {
-  text-decoration: none;
-  font-size: 0.9rem;
-  color: #666;
+  text-decoration: none; /* Eliminamos el subrayado predeterminado */
+  font-size: 1rem;
+  color: #333333; /* Color negro para los enlaces */
+  transition: color 0.3s ease; /* Animación suave */
+}
+
+.link:hover {
+  color: #000000; /* Color negro más intenso al pasar el cursor */
 }
 
 .active {
   font-weight: bold;
-  color: #007bff;
+  color: #ffffff; /* Color blanco para el enlace activo */
+  background: linear-gradient(90deg, #007bff, #82c4f7); /* Gradiente animado */
+  padding: 0.3rem 0.5rem; /* Espaciado interno para destacar el enlace activo */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Eliminamos cualquier subrayado */
+  border: none; /* Aseguramos que no haya borde inferior */
+  transition: background 0.5s ease, color 0.3s ease; /* Animación suave al cambiar de activo */
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Cambiamos a diseño vertical en pantallas pequeñas */
+    height: auto; /* Ajustamos la altura automáticamente */
+    padding: 0.5rem; /* Reducimos el espaciado */
+  }
+
+  .nav {
+    position: static; /* Eliminamos la posición absoluta */
+    transform: none; /* Eliminamos el centrado por transformación */
+    flex-direction: column; /* Enlaces en columna */
+    gap: 1rem; /* Espaciado entre enlaces */
+    margin-top: 0.5rem; /* Separación del logo */
+  }
+
+  .link {
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+  }
 }

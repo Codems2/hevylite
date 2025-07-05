@@ -1,9 +1,37 @@
 /* src/pages/Today.module.css */
 
 .container {
-  padding: 1.5rem;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
+  padding: 2rem;
+  position: relative; /* Necesario para el fondo animado */
+  overflow: hidden; /* Ocultamos cualquier exceso de animación */
+  transition: background-color 0.5s ease; /* Suavizamos el cambio de color */
+}
+
+.container.active {
+  background-color: #f0f8ff; /* Color liviano (AliceBlue) */
+}
+
+.background-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #007bff 10%, transparent 70%);
+  border-radius: 50%;
+  animation: rotateAnimation 10s linear infinite; /* Animación suavizada */
+  transform-origin: center;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 .title {
@@ -19,11 +47,58 @@
 }
 
 .card {
-  background-color: #f4f4f4;
-  padding: 1.25rem;
-  margin-bottom: 1.25rem;
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* Necesario para posicionar el botón en la esquina */
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuButton {
+  position: absolute; /* Posicionamos el botón en la esquina superior derecha */
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.menuButton:hover {
+  color: #000;
+}
+
+.menu {
+  position: absolute;
+  top: 2.5rem; /* Ajustamos la posición debajo del botón */
+  right: 1rem;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.deleteButton {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.deleteButton:hover {
+  background: #e60000;
 }
 
 .note {
@@ -60,15 +135,20 @@
 }
 
 .secondaryButton {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  background-color: #2196f3;
-  color: white;
+  background: #007bff;
+  color: #fff;
   border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
   cursor: pointer;
+  font-size: 1rem;
   margin-top: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.secondaryButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }
 
 .disabledButton {

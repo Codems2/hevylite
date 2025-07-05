@@ -1,76 +1,94 @@
 /* src/pages/Routines.module.css */
 
 .container {
-  padding: 1.5rem;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
+  padding: 2rem;
 }
 
 .title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .card {
-  background-color: #f9f9f9;
-  padding: 1.25rem;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
   margin-bottom: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-}
-
-.input {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  margin-bottom: 0.75rem;
-  box-sizing: border-box;
-}
-
-.setRow {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.inputGroup {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
 }
 
-.inputLabel {
-  font-size: 0.75rem;
-  color: #666;
-  margin-bottom: 0.25rem;
+.input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
-.primaryButton,
+.input:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+.inputGroup {
+  margin-bottom: 1rem;
+}
+
+.inputLabel {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.setRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
 .secondaryButton {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 5px;
+  background: #f0f0f0;
+  color: #333;
   border: none;
+  border-radius: 4px;
+  padding: 0.75rem;
   cursor: pointer;
-  margin-top: 1rem;
-  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.secondaryButton:hover {
+  background: #e0e0e0;
 }
 
 .primaryButton {
-  background-color: #4caf50;
-  color: white;
+  background: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-right: 0.5rem; /* Añadimos margen derecho para separar los botones */
 }
 
-.secondaryButton {
-  background-color: #2196f3;
-  color: white;
+.primaryButton:hover {
+  background: #005bb5;
 }
 
-.inputGroup.hidden,
-.inputGroup_hidden,
-.hidden {
-  display: none !important;
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .input {
+    width: 100%;
+  }
 }

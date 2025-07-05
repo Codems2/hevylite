@@ -1,0 +1,226 @@
+{
+  "PIERNA 1": [
+    {
+      "ejercicio": "prensa invertida 6-8",
+      "reps": "4",
+      "sets": "3",
+      "rest": "min",
+      "rir": "1",
+      "tempo": "EXC: 3",
+      "observaciones": "segpon los pies a una altura que te permita doblar la rodilla todo lo posible sin que se te levanten los talones a medida que vas bajando. baja en 3seg"
+    },
+    {
+      "ejercicio": "hip thrust con barra 8",
+      "reps": "4",
+      "sets": "3",
+      "rest": "min",
+      "rir": "0",
+      "tempo": "EXC: 2",
+      "observaciones": "seg baja en 2seg. apretando bien el gluteo. recuerda que tus pies y tus rodillas apunten ligeramente hacia afuera."
+    },
+    {
+      "ejercicio": "leg extension - extension de cuadriceps 12",
+      "reps": "3",
+      "sets": "2",
+      "rest": "min",
+      "rir": "FALLO",
+      "tempo": "HOLD: 1",
+      "observaciones": "seg manten 1seg la posicion. trata de que tu cadera esté totalmente sujeta en el banco."
+    },
+    {
+      "ejercicio": "curl femoral sentado 8",
+      "reps": "3",
+      "sets": "2",
+      "rest": "min",
+      "rir": "FALLO",
+      "tempo": "-  recuerda mantener la puntera de los pies apuntando hacia ti.",
+      "observaciones": ""
+    },
+    {
+      "ejercicio": "aduccion en maquina 9-12",
+      "reps": "3",
+      "sets": "2",
+      "rest": "min",
+      "rir": "FALLO",
+      "tempo": "EXC: 2",
+      "observaciones": "seg abre en 2seg. abre controlando y cierra fuerte."
+    }
+  ],
+  "TORSO 1": [
+    {
+      "ejercicio": "curl biceps - barra recta 6",
+      "reps": "3",
+      "sets": "2",
+      "rest": "min",
+      "rir": "FALLO",
+      "tempo": "- sube fuerte y baja controlando el movimiento estirando del todo el brazo.",
+      "observaciones": ""
+    },
+    {
+      "ejercicio": "Press banca 8",
+      "reps": "4",
+      "sets": "3",
+      "rest": "min",
+      "rir": "1",
+      "tempo": "EXC: 2",
+      "observaciones": "seg lleva la barra a tus pezones, con los hombros bien pegados al banco. baja en 2seg la barra, y sube fuerte."
+    },
+    {
+      "ejercicio": "remo con mancuerna unilateral 8",
+      "reps": "2 x lado",
+      "sets": "2",
+      "rest": "min",
+      "rir": "FALLO",
+      "tempo": "HOLD: 1",
+      "observaciones": "segmanten 1seg la posicion arriba. con el torso inclinado casi horizontal deja caer el hombro y luego rema llevando tu codo a tu cadera."
+    },
+    {
+      "ejercicio": "press inclinado - multipower 9-12",
+      "reps": "3",
+      "sets": "2",
+      "rest": "min",
+      "rir": "0",
+      "tempo": "EXC: 3",
+      "observaciones": "seg baja en 3seg"
+    },
+    {
+      "ejercicio": "jalon al pecho - agarre supino 12",
+      "reps": "3",
+      "sets": "2",
+      "rest": "min",
+      "rir": "FALLO",
+      "tempo": "HOLD: 1",
+      "observaciones": "seg manten 1seg la posicion"
+    },
+    {
+      "ejercicio": "aperturas de pecho en maquina 9-12",
+      "reps": "3",
+      "sets": "2",
+      "rest": "min",
+      "rir": "FALLO",
+      "tempo": "EXC: 3",
+      "observaciones": "seg manten el pecho alto, los codos ligeramente flexionados. abre en 3seg"
+    },
+    {
+      "ejercicio": "seal row con mancuernas - posterior 12-16",
+      "reps": "3",
+      "sets": "2",
+      "rest": "min",
+      "rir": "FALLO",
+      "tempo": "HOLD: 1",
+      "observaciones": "seginclina un banco unos 30º-45º y con dos mancuernas, realiza un remo con los codos ligeramente abiertos, extendiendo la zona alta de la espalda y pensando en llevar los codos hacia arriba. manten 1seg la posicion arriba."
+    }
+  ],
+  "PIERNA 2": [
+    {
+      "ejercicio": "peso muerto convencional 6",
+      "reps": "3",
+      "sets": "3",
+      "rest": "min",
+      "rir": "1",
+      "tempo": "EXC: 3",
+      "observaciones": "segintenta que la barra esté pegada a ti en todo el recorrido. Espald neutra, al tirar toma aire y aguantalo hasta empezar a bajar. Baja en 3seg"
+    },
+    {
+      "ejercicio": "prensa invertida 6",
+      "reps": "4",
+      "sets": "3",
+      "rest": "min",
+      "rir": "0",
+      "tempo": "EXC: 3",
+      "observaciones": "segpon los pies a una altura que te permita doblar la rodilla todo lo posible sin que se te levanten los talones a medida que vas bajando. baja en 3seg"
+    },
+    {
+      "ejercicio": "sentadilla bulgara - multipower - cuadriceps 9-12 x lado",
+      "reps": "3",
+      "sets": "2",
+      "rest": "min",
+      "rir": "0",
+      "tempo": "EXC: 3",
+      "observaciones": "seg trata de bajar lo mas recto posible, llevando la rodilla adelantada lo mas posible. baja en 3seg"
+    },
+    {
+      "ejercicio": "leg extension - extension de cuadriceps 12",
+      "reps": "3",
+      "sets": "2",
+      "rest": "min",
+      "rir": "FALLO",
+      "tempo": "HOLD: 1",
+      "observaciones": "seg manten 1seg la posicion."
+    },
+    {
+      "ejercicio": "curl femoral sentado 8",
+      "reps": "4",
+      "sets": "2",
+      "rest": "min",
+      "rir": "FALLO",
+      "tempo": "EXC: 3",
+      "observaciones": "seg baja en 3seg"
+    }
+  ],
+  "TORSO 2": [
+    {
+      "ejercicio": "press frances - con mancuernas 8",
+      "reps": "3",
+      "sets": "3",
+      "rest": "min",
+      "rir": "1",
+      "tempo": "EXC: 3",
+      "observaciones": "seginclina ligeramente un banco, y con los codos apuntando hacia arriba, realiza un press frances tratando de mantener el codo lo mas estable posible. baja en 3seg"
+    },
+    {
+      "ejercicio": "dominada supina - asistida con banda 6-8",
+      "reps": "4",
+      "sets": "3",
+      "rest": "min",
+      "rir": "FALLO",
+      "tempo": "EXC: 3",
+      "observaciones": "seg usa una goma que te permita hacer entre 6 y 8 dominadas dejandote un par en recamara. baja en 3seg"
+    },
+    {
+      "ejercicio": "press militar de pie 8-10",
+      "reps": "4",
+      "sets": "3",
+      "rest": "min",
+      "rir": "0",
+      "tempo": "EXC: 2",
+      "observaciones": "seg aprieta el gluteo, sube con los codos apuntando hacia adelante tratando de ir detrás de tu cabeza. baja en 2seg"
+    },
+    {
+      "ejercicio": "jalon al pecho - agarre supino 9-12",
+      "reps": "3",
+      "sets": "2",
+      "rest": "min",
+      "rir": "FALLO",
+      "tempo": "HOLD: 1",
+      "observaciones": "seg manten 1seg la posicion."
+    },
+    {
+      "ejercicio": "press inclinado - multipower 12",
+      "reps": "3",
+      "sets": "3",
+      "rest": "min",
+      "rir": "0",
+      "tempo": "EXC: 3",
+      "observaciones": "seg baja en 3seg"
+    },
+    {
+      "ejercicio": "facepull en gironda baja 12-16",
+      "reps": "3",
+      "sets": "2",
+      "rest": "min",
+      "rir": "FALLO",
+      "tempo": "HOLD: 1",
+      "observaciones": "seg manten 1seg la posicion."
+    },
+    {
+      "ejercicio": "elevaciones laterales sentado 12",
+      "reps": "3",
+      "sets": "1",
+      "rest": "min",
+      "rir": "FALLO",
+      "tempo": "EXC: 2",
+      "observaciones": "seg baja en 2seg"
+    }
+  ]
+}
